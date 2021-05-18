@@ -308,7 +308,10 @@ Az.StorageSync
 * Removed offline data transfer feature in ''New-AzStorageSyncServerEndpoint''.
 
 Az.Websites
-
+* Updated ''Set-AzAppServicePlan'' to keep existing Tags when adding new Tags
+* Fixed ''Set-AzWebApp'' to set the AppSettings
+* Updated ''Set-AzWebAppSlot'' to set FtpsState
+* Added support for StaticSites
 '
 
         # Prerelease string of this module

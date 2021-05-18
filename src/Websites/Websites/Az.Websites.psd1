@@ -164,7 +164,10 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '* Added support for StaticSites.'
+        ReleaseNotes = '* Updated ''Set-AzAppServicePlan'' to keep existing Tags when adding new Tags
+        * Fixed ''Set-AzWebApp'' to set the AppSettings
+        * Updated ''Set-AzWebAppSlot'' to set FtpsState
+        * Added support for StaticSites'
 
         # Prerelease string of this module
         # Prerelease = ''
