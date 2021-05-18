@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 2.6.0
 * Added support for StaticSites.
 ## Version 2.5.0
 * Updated `Add-AzWebAppAccessRestrictionRule` to allow all supported Service Tags and validate against Service Tag API.

@@ -429,23 +429,23 @@ namespace VersionController.Models
                     {
                         var updatedFile = file.Select(l => Regex.Replace(l, pattern, "ModuleName = '" + moduleName + "'; ModuleVersion = '" + _newVersion + "'"));
                         File.WriteAllLines(moduleManifestPath, updatedFile);
-                        var updatedModuleName = Path.GetFileNameWithoutExtension(moduleManifestPath);
-                        foreach (var outputDirectory in outputDirectories)
-                        {
-                            var outputModuleDirectory = Directory.GetDirectories(outputDirectory, updatedModuleName).FirstOrDefault();
-                            if (outputModuleDirectory == null)
-                            {
-                                continue;
-                            }
+                        // var updatedModuleName = Path.GetFileNameWithoutExtension(moduleManifestPath);
+                        // foreach (var outputDirectory in outputDirectories)
+                        // {
+                        //     var outputModuleDirectory = Directory.GetDirectories(outputDirectory, updatedModuleName).FirstOrDefault();
+                        //     if (outputModuleDirectory == null)
+                        //     {
+                        //         continue;
+                        //     }
 
-                            var outputModuleManifestPath = Directory.GetFiles(outputModuleDirectory, updatedModuleName + ".psd1").FirstOrDefault();
-                            if (outputModuleManifestPath == null)
-                            {
-                                continue;
-                            }
+                        //     var outputModuleManifestPath = Directory.GetFiles(outputModuleDirectory, updatedModuleName + ".psd1").FirstOrDefault();
+                        //     if (outputModuleManifestPath == null)
+                        //     {
+                        //         continue;
+                        //     }
 
-                            File.WriteAllLines(outputModuleManifestPath, updatedFile);
-                        }
+                        //     File.WriteAllLines(outputModuleManifestPath, updatedFile);
+                        // }
                     }
                 }
             }
